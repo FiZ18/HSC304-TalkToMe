@@ -10,7 +10,7 @@ WIFI_SSID = "PEXIST106_9"
 WIFI_PASSWORD = "imanilmuamal"
 TOKEN = "BBUS-8Iob9h82Y8og37zgb2tCSde4jVHTh9"
 
-# Inisialisasi sensor PIR
+# Inisialisasi sensor
 PIR_PIN = Pin(14, Pin.IN)
 
 # Fungsi buat JSON
