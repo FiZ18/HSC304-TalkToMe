@@ -1,0 +1,17 @@
+pip install ultralytics
+
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="c7UTJa6SSYv1ta7VgXlS")
+project = rf.workspace("firza-p152i").project("sign-language-2lad8")
+version = project.version(2)
+dataset = version.download("yolov8")
+
+from ultralytics import YOLO
+
+# Load a pre-trained YOLO model (you can choose n, s, m, l, or x versions)
+model = YOLO("yolo11n.pt")
+
+# Start training on your custom dataset
+model.train(data="/content/Sign-Language-2/data.yaml", epochs=2000, imgsz=640)
